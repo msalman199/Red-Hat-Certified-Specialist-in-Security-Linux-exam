@@ -1,0 +1,10 @@
+=== REMAINING COMPLIANCE VIOLATIONS ===
+Generated on: Tue Oct 13 04:52:28 UTC 2026
+
+./extract_failures.sh: line 8: oscap: command not found
+
+=== REMEDIATION RECOMMENDATIONS ===
+1. Review failed rules in the detailed HTML report
+2. Consult organization security policies for manual fixes
+3. Consider risk acceptance for non-critical violations
+4. Schedule regular compliance scans
