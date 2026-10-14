@@ -1,0 +1,3 @@
+/opt/mywebapp/mywebserver\.py    --    gen_context(system_u:object_r:mywebapp_exec_t,s0)
+/opt/mywebapp/content(/.*)?           gen_context(system_u:object_r:mywebapp_content_t,s0)
+/var/run/mywebapp\.pid           --    gen_context(system_u:object_r:mywebapp_var_run_t,s0)

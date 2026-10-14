@@ -1,0 +1,39 @@
+## <summary>My custom web application policy</summary>
+
+########################################
+## <summary>
+##	Execute mywebapp_exec_t in the mywebapp domain.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed to transition.
+## </summary>
+## </param>
+#
+interface(`mywebapp_domtrans',`
+    gen_require(`
+        type mywebapp_t, mywebapp_exec_t;
+    ')
+
+    corecmd_search_bin($1)
+    domtrans_pattern($1, mywebapp_exec_t, mywebapp_t)
+')
+
+########################################
+## <summary>
+##	Read mywebapp content files.
+## </summary>
+## <param name="domain">
+## <summary>
+##	Domain allowed access.
+## </summary>
+## </param>
+#
+interface(`mywebapp_read_content',`
+    gen_require(`
+        type mywebapp_content_t;
+    ')
+
+    files_search_var_lib($1)
+    read_files_pattern($1, mywebapp_content_t, mywebapp_content_t)
+')
